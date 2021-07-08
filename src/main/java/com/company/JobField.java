@@ -25,6 +25,7 @@ public abstract class JobField {
         return this.value;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
