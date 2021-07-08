@@ -28,6 +28,54 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+//    public String toString() {
+//        return "\n" + "ID: " + id + "\n" +
+//                "Name: " + name + "\n" +
+//                "Employer: " + employer + "\n" +
+//                "Location: " + location + "\n" +
+//                "PositionType: " + positionType + "\n" +
+//                "CoreCompetency: " + coreCompetency + "\n";
+//    }
+
+    public String toString() {
+        String jobInfo = "\n";
+        String emptyField = "Data not available\n";
+
+        jobInfo += "ID: " + this.getId() + "\n";
+
+        if(this.name.isEmpty()) {
+            jobInfo += "Name: " + emptyField;
+        } else {
+            jobInfo += "Name: " + this.name + "\n";
+        }
+
+        if(this.employer.getValue().isEmpty()) {
+            jobInfo += "Employer: " + emptyField;
+        } else {
+            jobInfo += "Employer: " + this.employer + "\n";
+        }
+
+        if(this.location.getValue().isEmpty()) {
+            jobInfo += "Location: " + emptyField;
+        } else {
+            jobInfo += "Location: " + this.location + "\n";
+        }
+
+        if(this.positionType.getValue().isEmpty()) {
+            jobInfo += "PositionType: " + emptyField;
+        } else {
+            jobInfo += "PositionType: " + this.positionType + "\n";
+        }
+
+        if(this.coreCompetency.getValue().isEmpty()) {
+            jobInfo += "CoreCompetency: " + emptyField;
+        } else {
+            jobInfo += "CoreCompetency: " + this.coreCompetency + "\n";
+        }
+
+        return jobInfo;
+    }
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields match.
 
     @Override
